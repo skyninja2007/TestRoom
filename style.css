@@ -52,6 +52,11 @@ button {
     cursor: pointer;
 }
 
+#randomSession {
+    justify-self: start;
+    width: auto;
+}
+
 button:hover {
     opacity: 0.9;
 }

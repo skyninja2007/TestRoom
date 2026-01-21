@@ -16,6 +16,7 @@
             <section class="card">
                 <h2>Log Study Session</h2>
                 <form id="studyForm">
+                    <button id="randomSession" type="button">Random</button>
                     <input
                         type="text"
                         id="subject"
@@ -50,6 +51,7 @@
             <!-- Results -->
             <section class="card">
                 <h2>Study Sessions</h2>
+                <canvas id="studyChart" height="120"></canvas>
                 <table id="logTable">
                     <thead>
                         <tr>
@@ -63,7 +65,7 @@
                 </table>
             </section>
         </main>
-
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="script.js"></script>
     </body>
 </html>
