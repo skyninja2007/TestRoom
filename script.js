@@ -20,8 +20,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (data.duration > 60 * 24) {
             alert(
-                "how in the world did you study for more then 24hs in 1 day?..",
+                "How in the world did you study for more then 24hs in 1 day?..",
             );
+            return;
+        } else if (data.duration < 0) {
+            alert("How can you study for -minutes?..");
             return;
         }
 
