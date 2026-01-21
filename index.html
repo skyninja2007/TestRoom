@@ -3,12 +3,67 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-        <link rel="stylesheet" href="/style.css" />
-        <script src="/script.js" defer></script>
+        <title>Study Tracker</title>
+        <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <h1>HELLOOOOO</h1>
-        <p>jauwshguawiwkdsjuiokjsauisodklfjios</p>
+        <header>
+            <h1>📘 Study Tracker</h1>
+        </header>
+
+        <main>
+            <!-- Log Study Form -->
+            <section class="card">
+                <h2>Log Study Session</h2>
+                <form id="studyForm">
+                    <input
+                        type="text"
+                        id="subject"
+                        placeholder="Subject"
+                        required
+                    />
+                    <input type="date" id="date" required />
+                    <input
+                        type="number"
+                        id="duration"
+                        placeholder="Minutes Studied"
+                        required
+                    />
+                    <textarea
+                        id="notes"
+                        placeholder="Notes (optional)"
+                    ></textarea>
+                    <button type="submit">Save Session</button>
+                </form>
+            </section>
+
+            <!-- Filter -->
+            <section class="card">
+                <h2>Retrieve Study Logs</h2>
+                <div class="filter">
+                    <input type="date" id="fromDate" />
+                    <input type="date" id="toDate" />
+                    <button id="filterBtn">Filter</button>
+                </div>
+            </section>
+
+            <!-- Results -->
+            <section class="card">
+                <h2>Study Sessions</h2>
+                <table id="logTable">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Subject</th>
+                            <th>Minutes</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </section>
+        </main>
+
+        <script src="script.js"></script>
     </body>
 </html>

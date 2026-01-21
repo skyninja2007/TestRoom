@@ -1,20 +1,81 @@
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
 * {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f4f4;
     margin: 0;
+    color: #333;
 }
 
-a {
-    text-decoration: none;
+header {
+    background: #4f46e5;
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
 }
 
-img,
-picture,
-svg {
-    max-width: 100%;
-    display: block;
+main {
+    max-width: 900px;
+    margin: auto;
+    padding: 1rem;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+form {
+    display: grid;
+    gap: 0.75rem;
+}
+
+input,
+textarea,
+button {
+    padding: 0.6rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+button {
+    background: #4f46e5;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.filter {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+@media (max-width: 600px) {
+    .filter {
+        flex-direction: column;
+    }
 }
