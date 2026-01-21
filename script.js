@@ -18,6 +18,13 @@ document.addEventListener("DOMContentLoaded", () => {
             notes: document.getElementById("notes").value,
         };
 
+        if (data.duration > 60 * 24) {
+            alert(
+                "how in the world did you study for more then 24hs in 1 day?..",
+            );
+            return;
+        }
+
         studyLogs.push(data);
         renderTable(studyLogs);
         updateChart(studyLogs);
